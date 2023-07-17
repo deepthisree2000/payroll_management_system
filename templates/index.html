@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Flask Application</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    <style>
+        /* Add your custom styles here */
+        body {
+            background-color: #152c29;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .section {
+            background-color: #1f453f;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .section h2 {
+            color: #fff;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .section p {
+            color: #d7e8e3;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        /* Add more custom styles as needed */
+
+        /* Dark Theme Styles */
+        body.dark-theme {
+            background-color: #262626;
+            color: #f2f2f2;
+        }
+
+        .section.dark-theme {
+            background-color: #3a544f;
+        }
+
+        .section.dark-theme h2 {
+            color: #f2f2f2;
+        }
+
+        .section.dark-theme p {
+            color: #c0cec9;
+        }
+
+        .section.dark-theme a {
+            color: #f2f2f2;
+        }
+    </style>
+</head>
+<body class="light-theme">
+    <div class="container">
+        <h1>Welcome to My Flask Application</h1>
+
+        <div class="section">
+            <h2>Employee Signup</h2>
+            <p>Sign up as a new employee</p>
+            <a href="/employee_signup">Sign Up</a>
+        </div>
+
+        <div class="section">
+            <h2>Attendance</h2>
+            <p>Submit your attendance</p>
+            <a href="/attendance">Submit Attendance</a>
+        </div>
+
+        <div class="section">
+            <h2>Payroll Release</h2>
+            <p>Release payroll for employees</p>
+            <a href="/payroll_release">Release Payroll</a>
+        </div>
+
+        <div class="section">
+            <h2>Show Employees</h2>
+            <p>View all employees</p>
+            <a href="/employees">View Employees</a>
+        </div>
+    </div>
+
+    <script>
+        // Add your custom JavaScript code here
+        function toggleTheme() {
+            document.body.classList.toggle("dark-theme");
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
