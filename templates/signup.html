@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Add your custom styles here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        /* Add more custom styles as needed */
+
+        /* Light Theme Styles */
+        body.light-theme {
+            --background-color: #3f4904;
+            --text-color: #333;
+        }
+
+        /* Dark Theme Styles */
+        body.dark-theme {
+            --background-color: #333;
+            --text-color: #f2f2f2;
+        }
+
+        /* Toggle Theme Button */
+        .toggle-theme {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .toggle-theme button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #163617;
+            color: #fff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body class="light-theme">
+    <div class="container">
+        <h1>Sign Up</h1>
+        <form action="/signup" method="POST">
+            <div class="form-group">
+                <label for="eid">Employee ID:</label>
+                <input type="text" id="eid" name="eid" required>
+            </div>
+            <div class="form-group">
+                <label for="ename">Employee Name:</label>
+                <input type="text" id="ename" name="ename" required>
+            </div>
+            <div class="form-group">
+                <label for="dptid">Department ID:</label>
+                <input type="text" id="dptid" name="dptid" required>
+            </div>
+            <div class="form-group">
+                <label for="designation">Designation:</label>
+                <input type="text" id="designation" name="designation" required>
+            </div>
+            <div class="form-group">
+                <label for="emailid">Email ID:</label>
+                <input type="email" id="emailid" name="emailid" required>
+            </div>
+            <div class="form-group">
+                <label for="contact_no">Contact Number:</label>
+                <input type="tel" id="contact_no" name="contact_no" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" required></textarea>
+            </div>
+            <button type="submit">Sign Up</button>
+        </form>
+        <div class="toggle-theme">
+            <button onclick="toggleTheme()">Toggle Theme</button>
+        </div>
+    </div>
+
+    <script>
+        // Add your custom JavaScript code here
+        function toggleTheme() {
+            document.body.classList.toggle("dark-theme");
+        }
+    </script>
+</body>
+</html>
