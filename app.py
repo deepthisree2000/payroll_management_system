@@ -1,5 +1,6 @@
 # importing libraries
 from employee_details import employee
+from employee_details import salarycalculator
 from flask import Flask,render_template,jsonify,request
 
 # creating ojects
@@ -57,6 +58,16 @@ def salary_details():
         emp.salary_details(eid=eid,dptid=dptid,account_number=account_number,PAN=PAN,Base_salary=Base_salary)
         return render_template('message.html')
     return render_template('enter_salary.html')
+@app.route('/payroll_release',methods = ['GET','POST'])
+def payroll_release():
+     if request.method=='POST':
+        eid = request.form.get("empid")
+        sc = salarycalculator()
+        total_salary = sc.salarycalculation(eid = int(eid))
+        context = {'EmployeeID':eid,'TotalSalary':int(total_salary)}
+        return render_template('showsalary.html',data = context)
+     else:
+       return render_template('enter_eid.html')
 
 if __name__ == '__main__':
     app.run()
