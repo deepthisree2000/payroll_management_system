@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Sign Up</title>
+    <title>Salary Details</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         /* Add your custom styles here */
@@ -67,37 +67,29 @@
 </head>
 <body class="light-theme">
     <div class="container">
-        <h1>Sign Up</h1>
-        <form action="/employee_signup" method="POST">
+        <h1>Enter Salary Details</h1>
+        <form action="/salary_details" method="POST">
             <div class="form-group">
                 <label for="eid">Employee ID:</label>
                 <input type="text" id="eid" name="eid" required>
-            </div>
-            <div class="form-group">
-                <label for="ename">Employee Name:</label>
-                <input type="text" id="ename" name="ename" required>
             </div>
             <div class="form-group">
                 <label for="dptid">Department ID:</label>
                 <input type="text" id="dptid" name="dptid" required>
             </div>
             <div class="form-group">
-                <label for="designation">Designation:</label>
-                <input type="text" id="designation" name="designation" required>
+                <label for="account_number">Account Number:</label>
+                <input type="text" id="account_number" name="account_number" required>
             </div>
             <div class="form-group">
-                <label for="emailid">Email ID:</label>
-                <input type="email" id="emailid" name="emailid" required>
+                <label for="PAN">PAN:</label>
+                <input type="text" id="PAN" name="PAN" required>
             </div>
             <div class="form-group">
-                <label for="contact_no">Contact Number:</label>
-                <input type="tel" id="contact_no" name="contact_no" required>
+                <label for="base_salary">Base Salary:</label>
+                <input type="text" id="Base_salary" name="Base_salary" required>
             </div>
-            <div class="form-group">
-                <label for="address">Address:</label>
-                <textarea id="address" name="address" required></textarea>
-            </div>
-            <button type="submit">Sign Up</button>
+            <button type="submit">SUBMIT</button>
         </form>
         <div class="toggle-theme">
             <button onclick="toggleTheme()">Toggle Theme</button>

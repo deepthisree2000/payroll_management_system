@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Details</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 75%;
+            text-align: center;
+            margin-top: 7.5%;
+            margin-bottom: auto;
+            margin-left: auto;
+            margin-right: auto;
+            table-layout: auto;
+        }
+        
+        
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #094712;
+        }
+        
+        th {
+            background-color: hsl(128, 13%, 35%);
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Employee ID</th>
+                <th>Name</th>
+                <th>Department ID</th>
+                <th>Designation</th>
+                <th>Email</th>
+                <th>Contact</th>
+                <th>Address</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for employee in employees %}
+                <tr>
+                    <td>{{ employee.eid }}</td>
+                    <td>{{ employee.ename }}</td>
+                    <td>{{ employee.dptid }}</td>
+                    <td>{{ employee.designation }}</td>
+                    <td>{{ employee.emailid }}</td>
+                    <td>{{ employee.contact_no }}</td>
+                    <td>{{ employee.address }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
+   
+

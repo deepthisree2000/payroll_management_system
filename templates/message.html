@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data Inserted Successfully</title>
+<!-- Font Awesome CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    background-color: hsl(161, 23%, 25%);
+    /*animation: animateBackground 20s linear infinite;
+    background-image: url('your-background-image.jpg'); Replace 'your-background-image.jpg' with the URL of your background image 
+    background-size: cover;
+    background-position: center;*/
+  }
+
+  @keyframes animateBackground {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+
+  .message-container {
+    background-color: rgba(76, 175, 80, 0.8);
+    color: #fff;
+    padding: 50px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+  }
+
+  /* Emoticons styles */
+  .emoticon {
+    font-size: 35px;
+    margin: 0 5px;
+  }
+
+  /* Icon styles */
+  .icon {
+    font-size: 25px;
+    margin-right: 5px;
+  }
+</style>
+</head>
+<body>
+  <div class="message-container" id="successMessage">
+    <i class="icon fas fa-check-circle"></i>
+    Data Inserted Successfully
+    <i class="emoticon far fa-smile"></i>
+  </div>
+</body>
+</html>

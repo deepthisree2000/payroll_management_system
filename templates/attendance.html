@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Attendance</title>
+  <!-- Add Bootstrap CSS link -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Add any custom styles for your app here */
+    /* Define dark theme styles here */
+    body.dark-theme {
+      background-color: #133605;
+      color: #5f2424;
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-4">
+    <!-- Toggle Button -->
+    <div class="custom-control custom-switch mb-3">
+      <input type="checkbox" class="custom-control-input" id="themeToggle">
+      <label class="custom-control-label" for="themeToggle">Toggle Theme</label>
+    </div> 
+
+    <!-- Attendance Form -->
+    <form action="/attendance" method="post">
+      <div class="form-group">
+        <label for="dptid">Department ID:</label>
+        <input type="text" class="form-control" id="dptid" name="dptid" required>
+      </div>
+      <div class="form-group">
+        <label for="dpt_name">Department Name:</label>
+        <input type="text" class="form-control" id="dpt_name" name="dpt_name" required>
+      </div>
+      <div class="form-group">
+        <label for="eid">Employee ID:</label>
+        <input type="text" class="form-control" id="eid" name="eid" required>
+      </div>
+      <div class="form-group">
+        <label for="ename">Employee Name:</label>
+        <input type="text" class="form-control" id="ename" name="ename" required>
+      </div>
+      <div class="form-group">
+        <label for="date">Date:</label>
+        <input type="date" class="form-control" id="date" name="date" required>
+      </div>
+      <div class="form-group">
+        <label for="time_in">Time In:</label>
+        <input type="text" class="form-control" id="time_in" name="time_in" required>
+      </div>
+      <div class="form-group">
+        <label for="time_out">Time Out:</label>
+        <input type="text" class="form-control" id="time_out" name="time_out" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+
+  <!-- Add Bootstrap JS and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <!-- Add your custom JavaScript for theme toggle here -->
+  <script>
+    // Function to toggle dark/light theme
+    function toggleTheme() {
+      const body = document.body;
+      body.classList.toggle("dark-theme");
+    }
+
+    // Add event listener to toggle button
+    document.getElementById("themeToggle").addEventListener("change", toggleTheme);
+  </script>
+</body>
+</html>
