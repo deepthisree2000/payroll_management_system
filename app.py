@@ -44,7 +44,7 @@ def attendance():
         print(eid,ename,dptid)
         emp = employee()
         emp.attendance(dptid=dptid,dpt_name=dpt_name,eid=eid,ename=ename,date=date,time_in=time_in,time_out=time_out)
-        return jsonify({'message':'successfully inserted'})
+        return render_template('index.html')
     return render_template('attendance.html')
 @app.route('/salary_details',methods = ['GET','POST'])
 def salary_details():
@@ -70,7 +70,7 @@ def payroll_release():
        return render_template('enter_eid.html')
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0',port=5050)
 
 # creating object for class
 

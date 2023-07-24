@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <head>
     <title>Payroll Management System</title>
@@ -11,16 +11,23 @@
             color: #fff;
             font-family: Arial, sans-serif;
             transition: background-color 0.3s ease, color 0.3s ease;
-            
         }
-        
+
         .container {
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
         }
 
+        .buttons-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
         .section {
+            width: 48%; /* Adjust this value as needed */
             background-color: #02201c;
             padding: 20px;
             border-radius: 5px;
@@ -59,7 +66,7 @@
             color: #c0cec9;
         }
 
-        .section.dark-theme a {
+        .section.dark-theme button {
             color: #f2f2f2;
         }
     </style>
@@ -68,33 +75,111 @@
     <div class="container">
         <h1>Welcome to Payroll Management System</h1>
 
-        <div class="section">
-            <h2>Employee Signup</h2>
-            <!-- <p>Sign up as a new employee</p> -->
-            <a href="/employee_signup">Sign Up</a>
-        </div>
+        <div class="buttons-container">
+            <div class="section">
+                <!--<h2>Employee Signup</h2> -->
+                <!-- <p>Sign up as a new employee</p> 
+                <button onclick="window.location.href='/employee_signup'">Sign Up</button>
+            </div>
+            
+            <div class="section">
+                <!-- <h2>Salary Details</h2> -->
+                <!-- <p>Release payroll for employees</p> 
+                <button onclick="window.location.href='/salary_details'">Enter Salary Details</button>
+            </div>
 
-        <div class="section">
-            <h2>Attendance</h2>
-            <!-- <p>Submit your attendance</p> -->
-            <a href="/attendance">Submit Attendance</a>
-        </div>
+            <div class="section">
+                <!-- <h2>Attendance</h2> -->
+                <!-- <p>Submit your attendance</p> 
+                <button onclick="window.location.href='/attendance'">Submit Attendance</button>
+            </div>
 
-        <div class="section">
-            <h2>Salary Details</h2>
-            <!-- <p>Release payroll for employees</p> -->
-            <a href="/salary_details">Enter Salary Details</a>
-        </div>
-        <div class="section">
-            <h2>Payroll Release</h2>
-            <!-- <p>Release payroll for employees</p> -->
-            <a href="/payroll_release">Release Payroll</a>
-        </div>
+            
+            <div class="section">
+                <!-- <h2>Payroll Release</h2> -->
+                <!-- <p>Release payroll for employees</p> 
+                <button onclick="window.location.href='/payroll_release'">Release Payroll</button>
+            </div>
 
-        <div class="section">
-            <h2>Show Employees</h2>
-            <!-- <p>View all employees</p> -->
-            <a href="/employees">View Employees</a>
+            <div class="section">
+                <!-- <h2>Show Employees</h2> -->
+                <!-- <p>View all employees</p> 
+                <button onclick="window.location.href='/employees'">View Employees</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Add your custom JavaScript code here
+        function toggleTheme() {
+            document.body.classList.toggle("dark-theme");
+        }
+    </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Payroll Management System</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    <style>
+        /* Add your custom styles here */
+        body {
+            background-color: #566408;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            
+        }
+
+        .buttons-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .buttons-container button {
+            width: 35%; /* Adjust this value as needed */
+            background-color: #02201c;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            color: #fff;
+            font-size: 14px;
+        }
+
+        /* Add more custom styles as needed */
+
+        /* Dark Theme Styles */
+        body.dark-theme {
+            background-color: #262626;
+            color: #f2f2f2;
+        }
+
+        .buttons-container.dark-theme button {
+            background-color: #3a544f;
+        }
+    </style>
+</head>
+<body class="light-theme">
+    <div class="container">
+        <h1>Welcome to Payroll Management System</h1>
+
+        <div class="buttons-container">
+            <button onclick="window.location.href='/employee_signup'">Employee Signup</button>
+            <button onclick="window.location.href='/attendance'">Attendance</button>
+            <button onclick="window.location.href='/salary_details'">Salary Details</button>
+            <button onclick="window.location.href='/payroll_release'">Payroll Release</button>
+            <button onclick="window.location.href='/employees'">Show Employees</button>
         </div>
     </div>
 
@@ -106,9 +191,4 @@
     </script>
 </body>
 </html>
-
-
-
-
-
 
